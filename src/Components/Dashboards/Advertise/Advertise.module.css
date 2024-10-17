@@ -1,0 +1,21 @@
+.giftCards {
+   display: flex;
+   flex-wrap: wrap;
+   width: 350px;
+   height: 190px;
+   overflow: hidden;
+   max-width: 350px;
+ }
+ 
+ .slider {
+   display: flex;
+   max-width: 350px;
+   transition: transform 0.5s ease-in-out;
+ }
+ 
+ .sliderImage {
+   width: 350px;
+   margin-top: -5px;
+   max-width: 350px;
+ }
+ 

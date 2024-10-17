@@ -1,0 +1,99 @@
+ .walletbalance{
+  gap: 90px;
+  display: flex;
+  padding: 20px;
+  height: 190px;
+  flex-wrap: wrap; 
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .balanceinfo {
+   gap: 250px;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+ }
+ 
+ .balancetext{
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+ }
+ 
+ .balancetextwallet{
+   gap: 50px;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+ }
+ 
+ .walleticons{
+   width: 24px;
+   height: 24px;
+   flex-shrink: 0;
+ }
+ 
+ .balancetextpara {
+   font-size: 23px;
+   font-weight: 400;
+   text-align: right;
+   font-style: normal;
+   line-height: normal;
+   color: var(--black, #000);
+   font-family: 'Poppins' sans-serif;
+ }
+
+ .balancetextview {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative; 
+  align-items: center;
+}
+
+.balancetexth2 {
+  text-align: right;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--black, #000);
+  font-family: 'Poppins' sans-serif;
+}
+
+.walleticons.fixedicon {
+  right: 0; 
+  top: 30%;
+  position: absolute; 
+  transform: translateY(-50%);
+}
+
+ .balanceTextSpan{
+   font-size: 16px;
+   font-weight: 400;
+   font-style: normal;
+   line-height: normal;
+   color: rgba(52, 71, 103, 0.50);
+   font-family: 'Poppins' sans-serif;
+ }
+ 
+ .topUpButton {
+   color: #fff;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: 500;
+   margin-top: 20px;
+   font-style: normal;
+   line-height: normal;
+   border-radius: 4px;
+   padding: 10px 20px;
+   align-self: flex-start;
+   background-color: #FDCA25;
+   color: var(--black, #000);
+   font-family: 'Poppins' sans-serif;
+ }
