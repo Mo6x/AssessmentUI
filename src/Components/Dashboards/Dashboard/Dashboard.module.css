@@ -1,99 +1,171 @@
- .walletbalance{
-  gap: 90px;
-  display: flex;
+.dashboardContainer {
+  max-width: 100%;
+  margin-top: -10px;
   padding: 20px;
-  height: 190px;
-  flex-wrap: wrap; 
-  border-radius: 8px;
+}
+
+.welcomeMessage {
+  font-size: 1.5em;
+  font-weight: bold;
   margin-bottom: 20px;
-  background-color: #fff;
+  color: black;
+}
+
+.statsSection {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
   justify-content: space-between;
+}
+
+.statBox {
+  flex: 1;
+  padding: 20px;
+  min-width: 230px;
+  border-radius: 8px;
+  align-items: flex-start;
+  background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
- }
- 
- .balanceinfo {
-   gap: 250px;
-   display: flex;
-   flex-wrap: wrap;
-   align-items: center;
- }
- 
- .balancetext{
+}
+
+.statBox h3 {
+  font-size: 1.2em;
+  color: #64748B;
+  margin-bottom: 10px;
+}
+
+.dashboarditems{
     gap: 20px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
- }
- 
- .balancetextwallet{
-   gap: 50px;
+}
+
+.statBoxPargraph {
+  font-size: 25px;
+  font-weight: 600;
+  color: #334155;
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+
+.arrorimagesitem{
+  gap: 10px;
    display: flex;
    flex-wrap: wrap;
    align-items: center;
- }
- 
- .walleticons{
-   width: 24px;
-   height: 24px;
-   flex-shrink: 0;
- }
- 
- .balancetextpara {
-   font-size: 23px;
-   font-weight: 400;
-   text-align: right;
-   font-style: normal;
-   line-height: normal;
-   color: var(--black, #000);
-   font-family: 'Poppins' sans-serif;
- }
+   justify-content: center;
+}
 
- .balancetextview {
+.ArrowColors{
+  width: 15px;
+  height: 15px;
+}
+
+.statBox span {
+  font-size: 0.9em;
+  color: green;
+}
+
+.negatives {
+  color: red;
+}
+
+
+
+
+
+
+.bottomSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.chart {
+  padding: 10px;
+  min-width: 400px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.barChartNumber{
+  gap: 30px;
   display: flex;
   flex-wrap: wrap;
-  position: relative; 
-  align-items: center;
+  color: #64748B;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.balancetexth2 {
-  text-align: right;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  color: var(--black, #000);
-  font-family: 'Poppins' sans-serif;
+.barChart {
+  display: flex;
+  height: 270px;
+  padding: 10px;
+  align-items: flex-end;
+  background-color: white;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.walleticons.fixedicon {
-  right: 0; 
-  top: 30%;
-  position: absolute; 
-  transform: translateY(-50%);
+.bar {
+  width: 35px;
+  margin: 0 5px;
+  color: white;
+  display: flex;
+  font-weight: bold;
+  text-align: center;
+  align-items: flex-end;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background-color: #9f74ff;
 }
 
- .balanceTextSpan{
-   font-size: 16px;
-   font-weight: 400;
-   font-style: normal;
-   line-height: normal;
-   color: rgba(52, 71, 103, 0.50);
-   font-family: 'Poppins' sans-serif;
- }
- 
- .topUpButton {
-   color: #fff;
-   border: none;
-   cursor: pointer;
-   font-size: 16px;
-   font-weight: 500;
-   margin-top: 20px;
-   font-style: normal;
-   line-height: normal;
-   border-radius: 4px;
-   padding: 10px 20px;
-   align-self: flex-start;
-   background-color: #FDCA25;
-   color: var(--black, #000);
-   font-family: 'Poppins' sans-serif;
- }
+.bar:hover {
+  background-color: #7754cc;
+  cursor: pointer;
+}
+
+.news {
+  flex: 1;
+  display: flex;
+  padding: 10px;
+  min-width: 400px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.newsContent {
+  flex: 1;
+}
+
+.newsContent h3 {
+  margin-bottom: 10px;
+}
+
+.newsContent p {
+  font-size: 0.9em;
+}
+
+.anonymous {
+  font-size: 0.8em;
+  color: green;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .statsSection {
+    flex-direction: column;
+  }
+
+  .bottomSection {
+    flex-direction: column;
+  }
+}

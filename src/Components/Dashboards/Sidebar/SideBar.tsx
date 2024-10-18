@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Dashboard from "../Dashboard/Dashboard";
-import { FaHome } from "react-icons/fa";
 import { FaRegBell } from "react-icons/fa";
 import { CiSettings } from "react-icons/ci";
 import { FaAnglesLeft } from "react-icons/fa6";
+import { MdOutlineHome } from "react-icons/md";
 import { TbReportSearch } from "react-icons/tb";
 import { PiToggleLeftFill } from "react-icons/pi";
 import { BsCalendar4Event } from "react-icons/bs";
@@ -19,9 +19,10 @@ const Sidebar: React.FC = () => {
   return (
     <div className={styles.mainsidebarcontiner}>
       <aside className={styles.sidebar}>
+       <div className={styles.companylogo}>Full Logo</div>
         <nav className={styles.nav}>
           <div className={styles.navItems} onClick={() => setActiveView("Dashboard")}>
-            <FaHome className={styles.icon} />
+            <MdOutlineHome className={styles.icon} />
             <span className={styles.innertest}>Home</span>
           </div>
           <div className={styles.navItems} onClick={() => setActiveView("Event")}>
@@ -70,13 +71,9 @@ const Sidebar: React.FC = () => {
           </div>
         </div>
       </aside>
-
-      <main className={styles.mainContent}>
+      <main className={styles.mainContents}>
         {activeView === "Dashboard" && <Dashboard />}
-       
-        {activeView === "customers" && <div>Customer Management</div>}
-      
-    
+        
         {activeView === "review" && <div>Review Section</div>}
         {activeView === "settings" && <div>Settings Page</div>}
       </main>

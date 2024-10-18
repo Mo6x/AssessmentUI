@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
-import gift1 from "../../../assets/cion1.webp";
-import gift2 from "../../../assets/coin3.avif";
-import gift3 from "../../../assets/coin4.png";
-import gift4 from "../../../assets/coin5.webp";
-import gift5 from "../../../assets/cion9.avif";
-import gift6 from "../../../assets/coin7.jpg";
-import gift7 from "../../../assets/coin8.jpg";
+import gift1 from "../../../assets/Slide1.png";
+import gift2 from "../../../assets/Sider2.png";
+import gift3 from "../../../assets/Sider3.png";
 import styles from "./Advertise.module.css";
 
 
@@ -16,10 +12,6 @@ export const Advertise: React.FC = () => {
     gift1,
     gift2,
     gift3,
-    gift4,
-    gift5,
-    gift6,
-    gift7,
   ];
 
   useEffect(() => {

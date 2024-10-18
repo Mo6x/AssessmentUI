@@ -1,10 +1,9 @@
-import Sidebar from "./Components/Dashboards/Sidebar/SideBar";
-
+import MainDashBoard from "./Components/Dashboards/MainDashBoard/MainDashBoard";
 function App() {
 
   return (
     <>
-     <Sidebar />
+    <MainDashBoard />
     </>
   )
 }

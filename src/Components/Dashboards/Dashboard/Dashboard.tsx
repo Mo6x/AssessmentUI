@@ -1,49 +1,89 @@
-import React, { useState } from 'react';
-import DisplayCard from "../Advertise/Advertise";
-import balanceview from "../../../assets/balanceview.svg";
-import Wallets from "../../../assets/wallet.svg"
-import styles from "./Dashboard.module.css";
+import React from "react";
+import Advertise from "../Advertise/Advertise";
+import Green from "../../../assets/arrorup.png";
+import RedArrow from "../../../assets/arrordown.png";
+import EventHistory from "../../EventHistory/EventHistory";
+import styles from './Dashboard.module.css';
 
 
 export const Dashboard: React.FC = () => {
-  const [isBalanceVisible, setIsBalanceVisible] = useState(true);
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [wallet, setWallet] = useState<{ accountBalance: string } | null>(null);
-
-  const toggleBalanceVisibility = () => {
-    setIsBalanceVisible(!isBalanceVisible);
-  };
-
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
   return (
-    <div className={styles.walletbalance}>
-      <div className={styles.balanceinfo}>
-        <div className={styles.balancetext}>
-          
-          <div className={styles.balancetextwallet}>
-            <img src={Wallets} alt="Wallet Icon" className={styles.walleticons} />
-            <p className={styles.balancetextpara}>Wallet Balance</p>
+    <div className={styles.dashboardContainer}>
+      <h1 className={styles.welcomeMessage}>Welcome! here's your summary</h1>
+      <div className={styles.statsSection}>
+        <div className={styles.statBox}>
+          <h3>Total Events</h3>
+          <div className={styles.dashboarditems}> 
+          <p className={styles.statBoxPargraph}>100,000</p>
+           <div className={styles.arrorimagesitem}> 
+            <img src={ Green } alt="green arrow " className={styles.ArrowColors} />
+            <span>+5.0%</span>
+           </div>
           </div>
-          <div className={styles.balancetextview}>
-            <h2 className={styles.balancetexth2}>{isBalanceVisible ? `₦${wallet ? wallet.accountBalance : '0.00'}` : '*****'}</h2>
-            <img
-              src={balanceview }
-              alt="View Balance Icon"
-              className={`${styles.walleticons} ${styles.fixedicon}`}
-              onClick={toggleBalanceVisibility}
-            />
-          </div>
-          <span className={styles.balanceTextSpan}>Available balance</span>
         </div>
-        <button className={styles.topUpButton} onClick={showModal}>
-          + TOP UP WALLET
-        </button>
+        <div className={styles.statBox}>
+          <h3>Active Speakers</h3>
+          <div className={styles.dashboarditems}> 
+          <p className={styles.statBoxPargraph}>25</p>
+          <div className={styles.arrorimagesitem}> 
+          <img src={ RedArrow } alt="green arrow " className={styles.ArrowColors} />
+          <span className={styles.negatives}>-5.0%</span>
+        </div>
+        </div>
+        </div>
+        <div className={styles.statBox}>
+          <h3>Total Registrations</h3>
+          <div className={styles.dashboarditems}> 
+          <p className={styles.statBoxPargraph}>300</p>
+          <div className={styles.arrorimagesitem}> 
+          <img src={ Green } alt="green arrow " className={styles.ArrowColors} />
+          <span>+5.0%</span>
+        </div>
+        </div>
+        </div>
+        <div className={styles.statBox}>
+          <h3>Total Revenue</h3>
+          <div className={styles.dashboarditems}> 
+          <p className={styles.statBoxPargraph}>$500,000</p>
+          <div className={styles.arrorimagesitem}> 
+          <img src={ Green } alt="green arrow " className={styles.ArrowColors} />
+          <span>+5.0%</span>
+        </div>
+      </div>
+      </div>
       </div>
 
-      <DisplayCard />
+      <div className={styles.bottomSection}>
+      <div className={styles.chart}>
+        <h3>Event Registrations per month</h3>
+        <div className={styles.barChart}>
+          <div className={styles.barChartNumber}>
+            <div>1,000</div>
+            <div>800</div>
+            <div>600</div>
+            <div>400</div>
+            <div>200</div>
+            <div>0</div>
+          </div>
+          <div className={styles.bar} style={{ height: "70%" }}>Jan</div>
+          <div className={styles.bar} style={{ height: "90%" }}>Feb</div>
+          <div className={styles.bar} style={{ height: "60%" }}>Mar</div>
+          <div className={styles.bar} style={{ height: "40%" }}>Apr</div>
+          <div className={styles.bar} style={{ height: "100%" }}>May</div>
+          <div className={styles.bar} style={{ height: "50%" }}>Jun</div>
+          <div className={styles.bar} style={{ height: "60%" }}>Jul</div>
+          <div className={styles.bar} style={{ height: "30%" }}>Aug</div>
+          <div className={styles.bar} style={{ height: "70%" }}>Sep</div>
+          <div className={styles.bar} style={{ height: "90%" }}>Oct</div>
+          <div className={styles.bar} style={{ height: "80%" }}>Nov</div>
+          <div className={styles.bar} style={{ height: "60%" }}>Dec</div>
+        </div>
+       </div>
+        <div className={styles.news}>
+          <Advertise  />
+        </div>
+      </div>
+      <EventHistory />
     </div>
   );
 };
