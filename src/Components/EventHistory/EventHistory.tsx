@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Download from "../../assets/download.svg";
+import DotImage from "../../assets/dotbutton.svg";
 import styles from "./EventHistory.module.css";
 
 
@@ -22,6 +24,12 @@ export const EventHistory: React.FC = () => {
     { name: 'AI in Healthcare Symposium', date: '2024-12-01', speaker: 'Dr. Aisha Malik', status: 'Completed' },
     { name: 'Future of Fintech Forum', date: '2024-10-25', speaker: 'John Lee', status: 'Completed' },
     { name: 'Data Analytics in Business', date: '2024-11-12', speaker: 'Rachel Moore', status: 'Completed' },
+    { name: 'Business man in line', date: '2024-13-17', speaker: 'John Weak', status: 'In Progress' },
+    { name: 'Business man in line', date: '2024-13-17', speaker: 'John Weak', status: 'In Progress' },
+    { name: 'Business man in line', date: '2024-13-17', speaker: 'John Weak', status: 'In Progress' },
+    { name: 'Business man in line', date: '2024-13-17', speaker: 'John Weak', status: 'In Progress' },
+    { name: 'Business man in line', date: '2024-13-17', speaker: 'John Weak', status: 'In Progress' },
+    { name: 'Business man in line', date: '2024-13-17', speaker: 'John Weak', status: 'In Progress' },
     // Add more events...
   ];
 
@@ -70,14 +78,18 @@ export const EventHistory: React.FC = () => {
           </select>
 
           <span>Displaying {filteredEvents.length} results</span>
-          
-          <div className="">
 
+          <div className={styles.sortbuttoncontainer}>
+          <span className={styles.sortselect}>Sort:</span>
           <select className={styles.sortSelect} value={sort} onChange={(e) => setSort(e.target.value)}>
             <option value="Most Recent">Most Recent</option>
             <option value="Oldest">Oldest</option>
           </select>
-          <button className={styles.exportBtn}>Export</button>
+            <img src={DotImage} alt="Dot icon" />
+           <div className={styles.dowloadbuttoncontainer}>
+            <img src={Download} alt="download icon" className={styles.dowloadIcon} />
+            <button className={styles.exportBtn}>Export</button>
+           </div>
           </div>
         </div>
 
@@ -119,9 +131,9 @@ export const EventHistory: React.FC = () => {
         <div>
           <label>Show:</label>
           <select>
+            <option value="5">5 rows</option>
             <option value="10">10 rows</option>
-            <option value="25">25 rows</option>
-            <option value="50">50 rows</option>
+            <option value="15">15 rows</option>
           </select>
         </div>
       </div>
