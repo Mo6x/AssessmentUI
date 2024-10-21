@@ -1,7 +1,7 @@
 .dashboardContainer {
   max-width: 100%;
-  margin-top: -10px;
   padding: 20px;
+  margin-top: -10px;
 }
 
 .welcomeMessage {
@@ -9,6 +9,7 @@
   font-weight: bold;
   margin-bottom: 20px;
   color: black;
+  text-align: left;
 }
 
 .statsSection {
@@ -22,10 +23,10 @@
 .statBox {
   flex: 1;
   padding: 20px;
-  min-width: 230px;
+  min-width: 200px;
   border-radius: 8px;
   align-items: flex-start;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.939);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -35,10 +36,10 @@
   margin-bottom: 10px;
 }
 
-.dashboarditems{
-    gap: 20px;
-    display: flex;
-    flex-wrap: wrap;
+.dashboarditems {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .statBoxPargraph {
@@ -49,15 +50,15 @@
   justify-self: flex-start;
 }
 
-.arrorimagesitem{
+.arrorimagesitem {
   gap: 10px;
-   display: flex;
-   flex-wrap: wrap;
-   align-items: center;
-   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.ArrowColors{
+.ArrowColors {
   width: 15px;
   height: 15px;
 }
@@ -75,27 +76,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
- 
+  flex-wrap: wrap; /* Allow wrapping */
 }
 
 .chart {
   padding: 10px;
-  min-width: 400px;
-}
-
-h3 {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.barChartNumber{
-  gap: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  color: #64748B;
-  align-content: center;
-  flex-direction: column;
-  justify-content: center;
+  min-width: 100%;
 }
 
 .barChart {
@@ -106,6 +92,7 @@ h3 {
   background-color: white;
   justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; 
 }
 
 .bar {
@@ -124,6 +111,16 @@ h3 {
 .bar:hover {
   background-color: #7754cc;
   cursor: pointer;
+}
+
+.barChartNumber {
+  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  color: #64748B;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .news {
@@ -155,12 +152,54 @@ h3 {
 }
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .statsSection {
     flex-direction: column;
   }
 
-  .bottomSection {
-    flex-direction: column;
+  .statBox {
+    width: 100%;
+    min-width: unset;
+    margin-bottom: 15px;
+  }
+
+  .chart {
+    min-width: 100%;
+  }
+
+  .barChartNumber {
+    font-size: 12px;
+  }
+
+  .bar {
+    width: 20px;
+  }
+
+  .news {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .welcomeMessage {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .bar {
+    width: 18px;
+  }
+
+  .statBoxPargraph {
+    font-size: 20px;
+  }
+
+  .barChartNumber {
+    font-size: 10px;
+  }
+
+  .barChart {
+    height: 220px; 
   }
 }

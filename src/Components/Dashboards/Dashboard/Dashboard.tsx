@@ -58,12 +58,12 @@ export const Dashboard: React.FC = () => {
         <h3>Event Registrations per month</h3>
         <div className={styles.barChart}>
           <div className={styles.barChartNumber}>
-            <div>1,000</div>
-            <div>800</div>
-            <div>600</div>
-            <div>400</div>
-            <div>200</div>
-            <div>0</div>
+            <div className={styles.pacentage}>1,000</div>
+            <div className={styles.pacentage}>800</div>
+            <div className={styles.pacentage}>600</div>
+            <div className={styles.pacentage}>400</div>
+            <div className={styles.pacentage}>200</div>
+            <div className={styles.pacentage}>0</div>
           </div>
           <div className={styles.bar} style={{ height: "70%" }}>Jan</div>
           <div className={styles.bar} style={{ height: "90%" }}>Feb</div>
@@ -79,10 +79,12 @@ export const Dashboard: React.FC = () => {
           <div className={styles.bar} style={{ height: "60%" }}>Dec</div>
         </div>
        </div>
+       
         <div className={styles.news}>
           <Advertise  />
         </div>
       </div>
+
       <EventHistory />
     </div>
   );
