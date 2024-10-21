@@ -14,7 +14,7 @@ import styles from "./SideBar.module.css";
 const Sidebar: React.FC = () => {
   const [activeView, setActiveView] = useState<string>("Dashboard");
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
-  const [color, setColor] = useState<string>("")
+  const [_, setColor] = useState<string>("");
   const [showColorOptions, setShowColorOptions] = useState<boolean>(false);
 
   const toggleSidebar = () => {
