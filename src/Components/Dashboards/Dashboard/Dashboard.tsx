@@ -56,7 +56,6 @@ export const Dashboard: React.FC = () => {
       <div className={styles.bottomSection}>
       
       <div className={styles.chart}>
-        
         <div>
         <h3 className={styles.statBoxh3 }>Event Registrations per month</h3>
         <div className={styles.barChart}>

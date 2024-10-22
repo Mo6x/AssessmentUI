@@ -168,21 +168,13 @@
 }
 
 .mainContents {
-  max-width: 80%;
+  max-width: 85%;
   flex-grow: 1;
-  padding: 20px;
+  padding: 10px;
 }
 
 @media (max-width: 768px) {
-  /* .mainsidebarcontiner {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    background-color: #2563EB;
-  } */
-
-  .closeBtn {
+   .closeBtn {
     width: 30px;
     height: 30px;
     margin: 10px;
