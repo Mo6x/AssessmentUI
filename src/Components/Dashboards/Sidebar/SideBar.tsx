@@ -46,7 +46,7 @@ const Sidebar: React.FC = () => {
       )}
 
       <aside className={`${styles.sidebar} ${isSidebarOpen ? styles.open : ""}`}>
-        <div className={styles.companylogo}>Full Logo</div>
+      <div className={styles.companylogo}>Full Logo</div>
         <nav className={styles.nav}>
           <div
             className={`${styles.navItems} ${activeView === "Dashboard" ? styles.activeNavItem : ""}`}

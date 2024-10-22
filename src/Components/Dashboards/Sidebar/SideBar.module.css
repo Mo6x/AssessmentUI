@@ -6,26 +6,26 @@
 }
 
 .hamburger {
-  font-size: 20px;
-  position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 1000;
-  background-color: transparent;
   border: none;
   cursor: pointer;
+  z-index: 1000;
+  font-size: 20px;
+  position: absolute;
+  background-color: transparent;
 }
 
 .closeBtn {
-  font-size: 24px;
-  position: absolute;
   top: 10px;
   right: 10px;
   z-index: 1100;
   border: none;
-  background-color: transparent;
   color: #333;
   cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  background-color: transparent;
 }
 
 .sidebar {
@@ -41,17 +41,33 @@
   position: relative;
 }
 
+.companylogos{
+  width: 120px;
+  padding: 10px;
+  font-size: 25px;
+  color: #2563EB;
+  background-color: #93C5FD;
+}
+
+.companylogo{
+  width: 120px;
+  padding: 10px;
+  font-size: 25px;
+  color: #2563EB;
+  background-color: #93C5FD;
+}
+
 .sidebar.open {
   transform: translateX(0);
 }
 
 .hamburger {
-  display: none;
-  font-size: 20px;
-  position: absolute;
   top: 10px;
   right: 10px;
   z-index: 1000;
+  display: none;
+  font-size: 20px;
+  position: absolute;
 }
 
 .closeBtn {
@@ -68,11 +84,31 @@
 
 .nav {
   display: flex;
+  position: fixed;
   flex-wrap: wrap;
   max-width: 100%;
-  margin-top: 10px;
+  margin-top: 85px;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.colorOptions {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.colorOption {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.activeNavItem {
+  background-color: #eef4ffee;
 }
 
 .navItems {
@@ -86,7 +122,7 @@
 }
 
 .navItems:hover {
-  background-color: #eef4ff;
+  background-color: #f0f0f0;
 }
 
 .icon {
@@ -94,11 +130,11 @@
 }
 
 .notification {
-  background-color: #ff5252;
   color: #fff;
   padding: 5px 10px;
   border-radius: 20px;
   font-size: 12px;
+  background-color: #ff5252;
 }
 
 .profile {
@@ -137,49 +173,30 @@
   padding: 20px;
 }
 
-
-
-.colorOptions {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0;
-}
-
-.colorOption {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 2px solid #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.activeNavItem {
-  background-color: #eef4ffee;
-}
-
-.navItems {
-  gap: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.navItems:hover {
-  background-color: #f0f0f0;
-}
-
-
-
-
-
-
 @media (max-width: 768px) {
+  /* .mainsidebarcontiner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #2563EB;
+  } */
+
+  .closeBtn {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
   .hamburger {
+   font-size: 25px;
+    margin: 10px;
     display: block;
+    cursor: pointer;
   }
 
   .sidebar {
